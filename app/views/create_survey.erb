@@ -1,6 +1,17 @@
 <h1>Create a Survey!</h1>
 
 <form action="/surveys" method="post">
-  <input type="text" name="title" placeholder="What is the name of your survey?">
-  <!-- <a href="hadfsa"></a> -->
+  <%survey = {}%>
+  <input type="text" name="<%=survey[:title]%>" placeholder="Survey name">
+  <br>
+  <br>
+  <%questions = []%>
+  <%5.times do |index|%>
+    <input type="text"
+      name=<%="questions[#{index}]"%>
+      placeholder= '<%="Question #{index + 1}"%>'>
+    <br>
+    <br>
+  <%end%>
+  <a href="/">add another question</a>
 </form>

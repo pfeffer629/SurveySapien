@@ -2,9 +2,9 @@ get '/' do
 	if session[:user_id]
       @surveys = Survey.all
   		erb :index
-  	else
+  else
   		erb :login
-  	end
+  end
 end
 
 post '/signup' do

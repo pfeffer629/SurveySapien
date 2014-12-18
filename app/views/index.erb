@@ -1,0 +1,5 @@
+<div class="container">
+  <% @surveys.each do |survey| %>
+    <div> <a href= 'surveys/<%= survey.id %>'> <%=survey.title%></a> by <%= User.find(survey.user_id) %></div>
+  <% end %>
+</div>

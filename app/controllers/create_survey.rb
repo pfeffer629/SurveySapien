@@ -3,6 +3,6 @@ get '/surveys/new' do
 end
 
 post '/surveys' do
-  survey = Survey.create(params[:survey])
+  survey = Survey.create(params)
   redirect to '/surveys/#{survey.id}'
 end

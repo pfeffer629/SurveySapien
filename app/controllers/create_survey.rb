@@ -3,6 +3,8 @@ get '/surveys/new' do
 end
 
 post '/surveys' do
-  survey = Survey.create(params)
+  survey = Survey.create(params[:survey])
+  params[:questions].each
+  params[:query]
   redirect to '/surveys/#{survey.id}'
 end

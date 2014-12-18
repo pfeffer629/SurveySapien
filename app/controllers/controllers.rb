@@ -1,3 +1,5 @@
 get '/' do
-  erb :create_survey
+  @surveys = Survey.all
+  p @surveys
+  erb :index
 end

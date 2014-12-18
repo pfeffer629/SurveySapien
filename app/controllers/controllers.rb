@@ -1,6 +1,7 @@
 get '/' do
 	if session[:user_id]
-  		erb :create_survey
+      @surveys = Survey.all
+  		erb :index
   	else
   		erb :login
   	end

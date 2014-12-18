@@ -11,16 +11,23 @@
 </head>
 <body>
   <div class= "header">
-    <table class="table">
-      <tr>
-        <td>
-          <h1 class ="sstitle"><a href="/">Survey Sapien</a></h1>
-        </td>
-        <td>
-          <a id="create" href="/surveys/new">Create Survey</a>
-        </td>
-      </tr>
-    </table>
+    <% if current_user %>
+      <table class="table">
+        <tr>
+          <td>
+            <h1 class ="sstitle"><a href="/">Survey Sapien</a></h1>
+          </td>
+            <td>
+              <a id="logout" href="/logout">Logout</a>
+            </td>
+          <td>
+            <a id="create" href="/surveys/new">Create Survey</a>
+          </td>
+        </tr>
+      </table>
+    <% else %>
+      <h1>SurveySapien</h1>
+    <% end %>
   </div>
   <%= yield %>
 </body>

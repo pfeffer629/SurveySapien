@@ -21,7 +21,7 @@ class User < ActiveRecord::Base
 	end
 
 	def authenticate(password)
-	  self.password == password
+	  self.pw_hash == password
 	end
 
 end

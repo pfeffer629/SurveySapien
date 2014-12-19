@@ -1,25 +1,21 @@
 get '/' do
-	if session[:user_id]
-      @surveys = Survey.all
-  		erb :index
+  if session[:user_id]
+    @surveys = Survey.all
+  	erb :index
   else
-  		erb :login
+  	erb :login
   end
 end
 
 post '/signup' do
   user = User.new(username: params[:username], pw_hash: params[:password], email: params[:email])
-  if user.save
-    session[:user_id]=user.id
-  end
+  session[:user_id]=user.id if user.save
   redirect '/'
 end
 
 post '/login' do
-  @user = User.find_by_email(params[:email])
-  if @user && @user.authenticate(params[:password])
-    session[:user_id] = @user.id
-  end
+  @user = User.find_by(username: params[:username])
+  session[:user_id] = @user.id if @user && @user.authenticate(params[:password])
   redirect '/'
 end
 

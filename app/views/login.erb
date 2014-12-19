@@ -3,7 +3,7 @@
 
 <% if @errors %>
   <%@errors.each do |x, y|%>
-    <%="#{x}: #{y}"%>
+    <%="#{x.capitalize} #{y}."%>
     <br>
   <%end%>
 <%end%>

@@ -25,6 +25,9 @@ body {
 }
 #whack{
     font-size: 3em;
+    color:blue;
+    margin-top: 1%;
+    margin-left: 2%;
 }
 
 h4 {
@@ -94,6 +97,8 @@ h4 {
 
 .header #whack {
     margin-top: 1%;
+    margin-left: 2%;
+
 }
 
 .delete-button {

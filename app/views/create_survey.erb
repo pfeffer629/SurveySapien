@@ -2,20 +2,19 @@
 
 <form action="/surveys" method="post">
   <!-- <%survey = {}%> -->
-  <input type="text" name="title" placeholder="Survey name">
-  <br>
-  <br>
-  <input type="text" name="questions[]" placeholder= "type question here">
-  <input type="text" name="questions[]" placeholder= "type question here">
-  <input type="text" name="questions[]" placeholder= "type question here">
-  <input type="text" name="questions[]" placeholder= "type question here">
-  <input type="text" name="questions[]" placeholder= "type question here">
+  <input class="survey_name" type="text" name="title" placeholder="Survey name">
 
+  <ul class="question_list">
+    <li><input class = "question" type="text" name="questions[]" placeholder= "type question here"></li>
+    <li><input class = "question" type="text" name="questions[]" placeholder= "type question here"></li>
+    <li><input class = "question" type="text" name="questions[]" placeholder= "type question here"></li>
+    <li><input class = "question" type="text" name="questions[]" placeholder= "type question here"></li>
+    <li><input class = "question" type="text" name="questions[]" placeholder= "type question here"></li>
+  </ul>
 
-  <br><br>
-  <a href="/">remove question</a>
+  <a class="remove_question" href="/">remove question</a>
   <br>
-  <a href="/">add another question</a>
+  <a class="add_question" href="/">add another question</a>
   <br>
   <br>
   <input type="submit" value="Submit">

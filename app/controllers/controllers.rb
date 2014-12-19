@@ -7,6 +7,13 @@ get '/' do
   end
 end
 
+get '/index/:page' do
+  @page = params[:page].to_i
+  surveys = Survey.all
+  @page_of_surveys = surveys.each_slice(10).to_a[@page-1]
+  erb :page
+end
+
 post '/signup' do
   user = User.new(username: params[:username], pw_hash: params[:password], email: params[:email])
   session[:user_id]=user.id if user.save

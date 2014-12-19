@@ -26,8 +26,8 @@ body {
     font-size: 3em;
 }
 
-h4 { 
- border:0 solid #fff; 
+h4 {
+ border:0 solid #fff;
  border-bottom-width:1px;
  padding-bottom:10px;
  text-align: center;
@@ -39,4 +39,63 @@ h4 {
 
 .wrapper {
     text-align: center;
+}
+
+.loginhead {
+    text-decoration: none;
+    color:blue;
+}
+
+.loginhead:visited {
+    text-decoration: none;
+    color: blue;
+}
+
+.loginhead:hover {
+    text-decoration: none;
+    color: blue;
+}
+
+.loginhead:active {
+    text-decoration: none;
+    color: blue;
+}
+
+.header {
+    height:10%;
+    width:100%;
+    overflow: hidden;
+}
+
+#logout {
+    float:right;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    text-decoration: none;
+    color:blue;
+    font-size:2em;
+    margin-right: 2%;
+    margin-bottom: 1%;
+}
+
+#create {
+    float:right;
+    text-decoration: none;
+    color:blue;
+    font-size: 2em;
+    margin-right: 2%;
+    margin-top: 2%;
+}
+
+.table {
+    width: 100%;
+}
+
+.header #whack {
+    margin-top: 1%;
+}
+
+.delete-button {
+
 }

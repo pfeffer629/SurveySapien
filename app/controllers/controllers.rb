@@ -11,7 +11,8 @@ get '/index/:page' do
   @page = params[:page].to_i
   surveys = Survey.all
   @page_of_surveys = surveys.each_slice(10).to_a[@page-1]
-  erb :page, :layout => false
+
+  return erb :page, :layout => false
 end
 
 post '/signup' do

@@ -1,5 +1,5 @@
 <div class="container">
-<!--   <% @surveys.each do |survey| %>
+  <% @surveys.first(10).each do |survey| %>
     <div id='<%=survey.id%>'>
       <a href= 'surveys/<%= survey.id %>'> <%=survey.title%></a> by <img src=<%= User.find(survey.user_id).gravatar%>+'?s=30'/> <a href='/users/<%=User.find(survey.user_id).id %>'><%= User.find(survey.user_id).username %></a>
       <% if survey.user_id == current_user.id %>
@@ -9,5 +9,5 @@
         </form>
       <% end %>
     </div>
-  <% end %> -->
+  <% end %>
 </div>

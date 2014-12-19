@@ -5,4 +5,8 @@ get '/surveys/:id' do
 end
 
 post '/surveys/:id' do
+  params[:answer].each do |answer|
+    Answer.create(response: answer, question_id: (params[:answer].index(answer) + 1))
+  end
+  redirect '/'
 end

@@ -3,7 +3,7 @@
 <form action="/surveys/<%=@survey.id%>" method="post">
   <%@question.each do |question|%>
     <label for <%= question.query %>> <%=question.query%></label>
-    <input type="text" name="response" placeholder="Type yo answer here">
+    <input type="text" name="answer[]" placeholder="Type yo answer here">
     <br>
   <% end %>
   <input type="submit" value="Submit">

@@ -1,9 +1,10 @@
 <div class="container">
-  <h1><%= @user.username%>'s Profile</h1>
+  <img class="gravatar" src='<%=@user.gravatar%>?s=200'>
+  <h1 class="profile"><%= @user.username%>'s Surveys:</h1>
   <ul>
     <% @user.surveys.each do |survey| %>
     <li id="<%=survey.id%>">
-      <a href="/surveys/<%=survey.id%>"><%=survey.title%></a>
+      <a class="survey-links" href="/surveys/<%=survey.id%>"><%=survey.title%></a>
       <% if survey.user_id == current_user.id %>
         <form class="delete-button" action="/surveys/<%= survey.id %>" method="post">
           <input type="hidden" name="_method" value="delete">

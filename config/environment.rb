@@ -20,6 +20,9 @@ require "sinatra/reloader" if development?
 
 require 'erb'
 
+require 'rack-flash'
+use Rack::Flash
+
 require 'bcrypt'
 
 # Some helper constants for path-centric logic

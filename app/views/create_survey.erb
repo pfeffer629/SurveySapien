@@ -1,6 +1,12 @@
 <h1>Create a Survey!</h1>
 
 <form action="/surveys" method="post">
+  <a class="add_question" href="/">add another question</a>
+  <br>
+  <a class="remove_question" href="/">remove question</a>
+  <br><br>
+  <input type="submit" value="Submit">
+  <br><br>
   <!-- <%survey = {}%> -->
   <input class="survey_name" type="text" name="title" placeholder="Survey name">
 
@@ -12,10 +18,10 @@
     <li><input class = "question" type="text" name="questions[]" placeholder= "type question here"></li>
   </ul>
 
-  <a class="remove_question" href="/">remove question</a>
+<!--   <a class="remove_question" href="/">remove question</a>
   <br>
   <a class="add_question" href="/">add another question</a>
   <br>
-  <br>
-  <input type="submit" value="Submit">
+  <br> -->
+<!--   <input type="submit" value="Submit"> -->
 </form>

@@ -102,8 +102,7 @@ h4 {
 }
 
 .allsurveys {
-    color:blue;
-    text-decoration: underline;
+    color:black;
 }
 
 a {
@@ -118,11 +117,6 @@ a {
 
 .gravatar {
     display:inline-block;
-}
-
-.profile {
-    color:blue;
-    text-decoration: underline;
 }
 
 .survey-links {

@@ -1,5 +1,9 @@
 get '/surveys/new' do
-  erb :create_survey
+  if session[:user_id]
+    erb :create_survey
+  else
+    redirect '/'
+  end
 end
 
 post '/surveys' do

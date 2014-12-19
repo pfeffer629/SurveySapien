@@ -3,13 +3,18 @@ get '/' do
     @surveys = Survey.all
   	erb :index
   else
+    @errors = flash[:errors] if flash[:errors]
   	erb :login
   end
 end
 
 post '/signup' do
   user = User.new(username: params[:username], pw_hash: params[:password], email: params[:email])
-  session[:user_id]=user.id if user.save
+  if user.save
+    session[:user_id] = user.id
+  else
+    flash[:errors] = user.errors
+  end
   redirect '/'
 end
 

@@ -129,3 +129,12 @@ a {
     font-size: 1.5em;
     font-weight: bold;
 }
+
+.create-survey-form {
+    margin-left: 3%;
+}
+
+.create-survey-head{
+    margin-left: 3%;
+    color:black;
+}

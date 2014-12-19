@@ -1,7 +1,7 @@
 <div class="container">
   <% @surveys.each do |survey| %>
     <div id='<%=survey.id%>'>
-      <a href= 'surveys/<%= survey.id %>'> <%=survey.title%></a> by <%= User.find(survey.user_id) %>
+      <a href= 'surveys/<%= survey.id %>'> <%=survey.title%></a> by <img src=<%= User.find(survey.user_id).gravatar%>+'?s=30'/> <%= User.find(survey.user_id).username %>
       <form class="delete-button" action="/surveys/<%= survey.id %>" method="post">
         <input type="hidden" name="_method" value="delete">
         <input type="submit" value="Delete!">

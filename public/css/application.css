@@ -10,7 +10,7 @@ body {
 .container {
     padding: 25px;
     position: fixed;
-    width: 33%;
+    width: 50%;
 }
 .form-login {
     background-color: #EDEDED;

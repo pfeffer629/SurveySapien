@@ -1,17 +1,20 @@
 <h1>Create a Survey!</h1>
 
 <form action="/surveys" method="post">
-  <%survey = {}%>
-  <input type="text" name="<%=survey[:title]%>" placeholder="Survey name">
+  <!-- <%survey = {}%> -->
+  <input type="text" name="title" placeholder="Survey name">
   <br>
   <br>
-  <%questions = []%>
+  <!-- <%questions = []%> -->
   <%5.times do |index|%>
-    <input type="text"
-      name=<%="questions[#{index}]"%>
-      placeholder= '<%="Question #{index + 1}"%>'>
+    <!--<input type="text" name=<%="questions[#{index}]"%> placeholder= '<%="Question #{index + 1}"%>'>-->
+    <input type="text" name=<%="questions"%> placeholder= '<%="Question #{index + 1}"%>'>
     <br>
     <br>
   <%end%>
+  <a href="/">remove question</a>
   <a href="/">add another question</a>
+  <br>
+  <br>
+  <input type="submit" value="Submit">
 </form>

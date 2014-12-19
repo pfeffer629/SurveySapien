@@ -1,7 +1,31 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
+  $('.delete-button').on('click', function(event){
+    event.preventDefault();
+    var deleteUrl = $(this).attr('action');
+    $.ajax({
+      type: 'DELETE',
+      url: deleteUrl
+    }).done(function(data){
+      $("#"+data.id).remove();
+    })
+  });
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+  $('.remove_question').on('click', function(event){
+    event.preventDefault();
+    $(".question").last().remove();
+    $("li").last().remove();
+  })
+
+  $('.add_question').on('click', function(event){
+    event.preventDefault();
+    var lastListItem = $
+    $('<li>').appendTo('.question_list')
+    $('<input>').attr({
+      class: "question",
+      type: "text",
+      name: "questions[]",
+      placeholder: "type question here"
+    }).appendTo('li:last-child')
+  })
+
 });

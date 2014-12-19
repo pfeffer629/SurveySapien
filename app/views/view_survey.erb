@@ -1,0 +1,27 @@
+<div class='container'>
+  <% if User.find(@survey.user_id).id == current_user.id %>
+    <h2><%= @survey.title %> Results</h2>
+    <ul>
+      <% @survey.questions.each do |question|%>
+        <li><%= question.query %></li>
+          <ul>
+            <% question.answers.each do |answer| %>
+              <li><%= answer.response %></li>
+            <% end %>
+          </ul>
+      <% end %>
+    </ul>
+  <% else %>
+    <h1><%= @survey.title %></h1><h4>by: <img src=<%= User.find(@survey.user_id).gravatar%>+'?s=30'/> <a href='/users/<%= User.find(@survey.user_id).id %>'><%= User.find(@survey.user_id).username %></a></h3>
+
+    <form action="/surveys/<%=@survey.id%>" method="post">
+      <%@survey.questions.each do |question|%>
+        <label for <%= question.query %>> <%=question.query%></label>
+        <input type="text" name="answer[]" placeholder="Type yo answer here">
+        <input type="hidden" name="question_ids[]" value = <%=question.id%>>
+        <br>
+      <% end %>
+      <input type="submit" value="Submit">
+    </form>
+  <% end %>
+</div>

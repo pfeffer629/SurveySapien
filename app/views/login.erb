@@ -1,6 +1,12 @@
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
 <div class="container">
+    <div class="row">
+        <div class="col-md-offset-5 col-md-3">
+          <div class="form-login">
+<div class="container2">
   <div id="signup">
-    <h1>Sign Up!</h1>
+    <h1>You, human! Sign up!</h1>
     <form action="/signup" method="POST">
       <label for="username">Username: </label>
       <input type="text" id="username" placeholder="Pick a username..." name="username"><br>
@@ -13,12 +19,14 @@
   </div>
   <div id="login">
     <h1>Login</h1>
+    
     <form action="/login" method="POST">
-      <label for="username">Username: </label>
-      <input type="text" placeholder="Enter username..." name="username"><br>
+      <label class="form-control input-sm chat-input" for="username">Username: </label>
+      <input type="text" class="form-control input-sm chat-input"placeholder="Enter username..." name="username"><br>
       <label for="password">Password: </label>
-      <input type="password" id="password" placeholder="Enter password..." name="password"><br>
-      <input type="submit" value="Login">
+      <input class="form-control input-sm chat-input" type="password" id="password" placeholder="Enter password..." name="password"><br>
+      <input type="submit" value="Login"class="form-control input-sm chat-input">
     </form>
   </div>
+</div>
 </div>

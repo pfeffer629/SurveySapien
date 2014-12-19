@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
 	has_many :surveys
 	validates :email, :username, {presence: true, uniqueness: true}
 	validates :pw_hash, presence: true
+	validates :email, format: {with: /\S+@{1}\S+[.]\D{2,}/, message: 'is not a valid email address'}
 
 	before_save :gravatar_src
 

@@ -1,5 +1,11 @@
 <div class="container">
   <% @surveys.each do |survey| %>
-    <div> <a href= 'surveys/<%= survey.id %>'> <%=survey.title%></a> by <%= User.find(survey.user_id) %></div>
+    <div id='<%=survey.id%>'>
+      <a href= 'surveys/<%= survey.id %>'> <%=survey.title%></a> by <%= User.find(survey.user_id) %>
+      <form class="delete-button" action="/surveys/<%= survey.id %>" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="Delete!">
+      </form>
+    </div>
   <% end %>
 </div>

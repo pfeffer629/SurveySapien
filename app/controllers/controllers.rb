@@ -8,6 +8,18 @@ get '/' do
   end
 end
 
+get '/:id/vote' do
+  survey = Survey.find(params[:id])
+  survey.votes.create(value: 1)
+
+  if request.xhr?
+    return survey.points.to_json
+    redirect '/'
+  else
+    redirect "/"
+  end
+end
+
 post '/signup' do
   user = User.new(username: params[:username], pw_hash: params[:password], email: params[:email])
   if user.save

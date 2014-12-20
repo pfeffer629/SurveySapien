@@ -17,9 +17,9 @@ body {
     width: 40%;
 }
 
-/*form {
+form {
     width: 10%;
-}*/
+}
 
 .form-login {
     background-color: #EDEDED;
@@ -51,7 +51,6 @@ h4 {
  border:0 solid #fff;
  border-bottom-width:1px;
  padding-bottom:10px;
- text-align: center;
 }
 
 .form-control {

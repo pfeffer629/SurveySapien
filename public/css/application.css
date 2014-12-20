@@ -12,6 +12,15 @@ body {
     position: fixed;
     width: 50%;
 }
+
+.row {
+    width: 40%;
+}
+
+form {
+    width: 10%;
+}
+
 .form-login {
     background-color: #EDEDED;
     padding-top: 10px;
@@ -21,8 +30,16 @@ body {
     border-radius: 15px;
     border-color:#d2d2d2;
     border-width: 5px;
-    box-shadow:0 1px 0 #cfcfcf;
+    box-shadow:0 3px 0 #cfcfcf;
+    /*opacity: .9;*/
 }
+
+.login-countainer {
+    padding: 25px;
+    position: fixed;
+    width: 25%;
+}
+
 #whack{
     font-size: 3em;
     color:blue;
@@ -34,7 +51,6 @@ h4 {
  border:0 solid #fff;
  border-bottom-width:1px;
  padding-bottom:10px;
- text-align: center;
 }
 
 .form-control {
@@ -131,11 +147,17 @@ a {
 
 .create-survey-form {
     margin-left: 3%;
+    width: 30%;
 }
 
 .create-survey-head{
     margin-left: 3%;
     color:black;
+}
+
+.error{
+    margin-left: 3%;
+    color: red;
 }
 
 .vote-button {
@@ -144,4 +166,3 @@ a {
   display: inline;
   vertical-align: sub;
 }
-

@@ -2,7 +2,12 @@
   <h1 class="allsurveys">Some Cool Surveys:</h1>
   <% @surveys.each do |survey| %>
     <div id='<%=survey.id%>'>
-      <a class="surveys" href= 'surveys/<%= survey.id %>'> <%=survey.title%></a> by <img src=<%= User.find(survey.user_id).gravatar%>+'?s=30'/> <a href='/users/<%=User.find(survey.user_id).id %>'><%= User.find(survey.user_id).username %></a>
+      <br>
+      <span class='points'><%= survey.points %></span>
+      <a href='/<%= survey.id %>/vote' class="fa fa-sort-desc vote-button"></a>
+      <a class="surveys" href= 'surveys/<%= survey.id %>'> <%=survey.title%></a>
+      <br>
+       by <img src=<%= User.find(survey.user_id).gravatar%>+'?s=30'/> <a href='/users/<%=User.find(survey.user_id).id %>'><%= User.find(survey.user_id).username %></a>
       <% if survey.user_id == current_user.id %>
         <form class="delete-button" action="/surveys/<%= survey.id %>" method="post">
           <input type="hidden" name="_method" value="delete">

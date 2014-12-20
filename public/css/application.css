@@ -159,3 +159,10 @@ a {
     margin-left: 3%;
     color: red;
 }
+
+.vote-button {
+  color: #8C8C8C;
+  text-decoration: none;
+  display: inline;
+  vertical-align: sub;
+}

@@ -28,4 +28,21 @@ $(document).ready(function() {
     }).appendTo('li:last-child')
   })
 
+  $('.vote-button').click(function(event){
+    event.preventDefault();
+    $target = $(event.target);
+    $parent = $target.parent();
+    $target.css("color", "green");
+
+    $.ajax({
+      type: 'GET',
+      url: '/' + $parent.attr("id") + '/vote',
+      dataType: "JSON"
+    }).done(function(response){
+      $target.css("color", "red")
+      $('.points').html(response)
+    })
+  })
+
+
 });

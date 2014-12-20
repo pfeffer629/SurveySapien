@@ -10,7 +10,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
   <script src="/js/application.js"></script>
 
-  <title></title>
+  <title>SurveySimian</title>
 </head>
 <body>
   <div class= "header">
@@ -30,6 +30,13 @@
       <h1 id="whack">SurveySapien</h1>
     <% end %>
   </div>
+  <% if @errors %>
+  <%@errors.each do |x, y|%>
+    <%="#{x.capitalize} #{y}."%>
+    <br>
+  <%end%>
+<%end%>
+
   <%= yield %>
 </body>
 </html>

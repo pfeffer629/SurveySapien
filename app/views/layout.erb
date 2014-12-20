@@ -30,12 +30,16 @@
       <h1 id="whack">SurveySapien</h1>
     <% end %>
   </div>
-  <% if @errors %>
-  <%@errors.each do |x, y|%>
-    <%="#{x.capitalize} #{y}."%>
-    <br>
-  <%end%>
-<%end%>
+
+  <!-- display errors! -->
+  <div class="error">
+    <% if @errors %>
+      <%@errors.each do |x, y|%>
+        <%="#{x.capitalize} #{y}."%>
+        <br>
+      <%end%>
+    <%end%>
+  </div>
 
   <%= yield %>
 </body>

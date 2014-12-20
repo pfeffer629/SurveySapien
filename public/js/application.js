@@ -40,7 +40,7 @@ $(document).ready(function() {
       dataType: "JSON"
     }).done(function(response){
       $target.css("color", "red")
-      $('.points').html(response)
+      $parent.children('.points').html(response)
     })
   })
 

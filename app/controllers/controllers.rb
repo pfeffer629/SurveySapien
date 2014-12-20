@@ -25,7 +25,7 @@ post '/login' do
   else
     flash[:errors] = ["invalid username or password"]
   end
-    redirect '/'
+  redirect '/'
 end
 
 get '/logout' do

@@ -6,6 +6,6 @@ class Survey < ActiveRecord::Base
   validates :title, presence: true
 
   def points
-    self.votes.sum(:value)
+    votes.sum(:value)
   end
 end

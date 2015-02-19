@@ -1,6 +1,6 @@
 get '/' do
   if session[:user_id]
-    @surveys = Survey.all
+    @surveys = Survey.all.sort_by {|survey| survey.votes.count}.reverse
   	erb :index
   else
     @errors = flash[:errors] if flash[:errors]

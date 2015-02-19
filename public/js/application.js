@@ -40,7 +40,11 @@ $(document).ready(function() {
       dataType: "JSON"
     }).done(function(response){
       $target.css("color", "red")
+<<<<<<< HEAD
       $('.points').html(response)
+=======
+      $parent.children('.points').html(response)
+>>>>>>> 6662388c5889b6985547c4760e403180f139d291
     })
   })
 
